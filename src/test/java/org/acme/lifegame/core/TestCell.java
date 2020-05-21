@@ -13,5 +13,12 @@ class TestCell {
 		c.tick();
 		assertFalse(c.getStatus()); 
 	}
+	
+	@Test
+	void liveCellWithZeroLiveNeighboursDies() {
+		Cell c = new Cell(true,0);
+		c.tick();
+		assertFalse(c.getStatus()); 
+	}
 
 }
